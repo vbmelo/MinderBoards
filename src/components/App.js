@@ -1,9 +1,17 @@
-import React, { PureComponent } from "react";
-import Routes from "../routes";
+import "../styles/App.css";
 
-class App extends PureComponent {
+import React, { Component } from "react";
+import Board from "./Board";
+
+class App extends Component {
   render() {
-    return <Routes />;
+    return (
+      <div className="App">
+        <div className="Header">React Trello Clone</div>
+
+        <Board />
+      </div>
+    );
   }
 }
 
