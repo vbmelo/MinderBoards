@@ -1,18 +1,18 @@
 import "../styles/App.css";
 
-import React, { Component } from "react";
-import Board from "./Board";
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from 'react-router-dom';
+import HomeBoard from "./HomeBoard"
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="Header">React Trello Clone</div>
-
-        <Board />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+          <Route exact path='/' element={<HomeBoard/>}/>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
