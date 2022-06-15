@@ -6,7 +6,7 @@ export default function seed(store) {
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: firstListId, listTitle: "First list" }
+    payload: { listId: firstListId, listTitle: "Esta é sua primeira Lista, geralmente, tratam de um tópico, tema ou tarefa em específico" }
   });
 
   store.dispatch({
@@ -14,7 +14,7 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "First card"
+      cardText: "Este é seu primeiro card. Cada card contém infromações úteis, geralmente sobre o que sua lista trata!"
     }
   });
 
@@ -23,7 +23,16 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "Second card"
+      cardText: "Clique no ícone de edição para editar ou deletar conteúdo o Card"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: firstListId,
+      cardId: shortid.generate(),
+      cardText: "Clique no título da Lista para editar ou deletar a Lista"
     }
   });
 
@@ -32,7 +41,7 @@ export default function seed(store) {
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: secondListId, listTitle: "Second list" }
+    payload: { listId: secondListId, listTitle: "Cada Lista é inserida em uma Board!" }
   });
 
   store.dispatch({
@@ -40,7 +49,7 @@ export default function seed(store) {
     payload: {
       listId: secondListId,
       cardId: shortid.generate(),
-      cardText: "Card 1"
+      cardText: "Uma Board é o seu espaço de trabalho, onde podes ter um Tema, como \"Trabalhos da Universidade\" e ter varias Listas com informações sobre cada Trabalho"
     }
   });
 
@@ -49,7 +58,25 @@ export default function seed(store) {
     payload: {
       listId: secondListId,
       cardId: shortid.generate(),
-      cardText: "Card 2"
+      cardText: "Você também pode mover Cards entre Listas ou ainda mudar a ordem das Listas. Basta clicar e arrastar!"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: secondListId,
+      cardId: shortid.generate(),
+      cardText: "Além disso tudo, ainda podes Adicionar novos Cards clicando no botão (+ Add a Card)"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: secondListId,
+      cardId: shortid.generate(),
+      cardText: "E ainda podes adicionar novas Listas a sua Board clicando no botão (+ Add a List)"
     }
   });
 };
