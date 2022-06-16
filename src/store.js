@@ -164,9 +164,12 @@ store.subscribe(
   }, 1000)
 );
 
+console.log("limpando Local Storage")
+localStorage.clear();
+console.log("Pegando o Estado guardado no Local Storage")
 console.log(store.getState());
 if (!store.getState().board.lists.length) {
-  console.log("SEED");
+  console.log("Implementando a SEED");
   seed(store);
 }
 

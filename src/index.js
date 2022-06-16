@@ -11,6 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 
 const rootElement = document.getElementById("root");
+
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
